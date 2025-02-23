@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: System Identification</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Phase 1: System Identification</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-content">
+        <h2>Overview</h2>
+        <p>System identification is used to derive a **transfer function model** from real-time input-output data. The system is a DC motor, where input is voltage, and output is speed.</p>
+
+        <h2>📌 Steps in System Identification</h2>
+        <ul>
+            <li>Run the Simulink model to collect **input-output data**.</li>
+            <li>Use MATLAB's **System Identification Toolbox**.</li>
+            <li>Estimate a **transfer function** using a second-order system.</li>
+            <li>Validate the model against real-time experimental results.</li>
+        </ul>
+
+        <h2>⚙️ Transfer Function Model</h2>
+        <p>After running the identification process, the estimated model is:</p>
+        <pre>
+H(s) = 6.853 / (s² + 17.72s + 104.8)
+        </pre>
+
+        <h2>📌 MATLAB Implementation</h2>
+        <pre>
+% Load data
+z = iddata(y, u, 0.01);
+
+% Open System Identification Toolbox
+systemIdentification
+
+% Estimate transfer function
+sys = tfest(z, 2, 0);
+        </pre>
+
+        <h2>📌 Next Phase</h2>
+        <p>Now that we have a system model, we can proceed to **Phase 2: PID Controller Design**.</p>
+        <a href="../PID Controller Design/phase2-pid-control.html" class="button">Go to Phase 2</a>
+    </section>
+</body>
+</html>

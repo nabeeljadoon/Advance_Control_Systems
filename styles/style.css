@@ -1,66 +1,132 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
+
+/* Header Section */
 header {
     background: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 0;
     text-align: center;
 }
+
+/* Navigation Bar */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
+
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
 }
+
+nav ul li a:hover {
+    background: #008CBA;
+    border-radius: 5px;
+}
+
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     background: #444;
     color: white;
 }
+
+.hero h2 {
+    font-size: 2em;
+}
+
 .button {
     display: inline-block;
     background: #008CBA;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
 }
+
+.button:hover {
+    background: #005f79;
+}
+
+/* Project List Section */
 .project-list {
-    padding: 20px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .project {
     background: white;
     padding: 20px;
-    margin: 20px;
+    margin: 15px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
 }
-.contact-content, .about-content {
-    padding: 20px;
+
+.project:hover {
+    transform: scale(1.05);
 }
+
+.project h3 {
+    color: #333;
+    border-bottom: 2px solid #008CBA;
+    padding-bottom: 10px;
+}
+
+.project p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Project Page Styling */
 .project-content {
-    padding: 20px;
+    padding: 40px;
     background: white;
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .project-content h2 {
-    color: #333;
+    color: #008CBA;
     border-bottom: 2px solid #008CBA;
     padding-bottom: 5px;
 }
+
 .project-content img {
     display: block;
     margin: auto;
     border-radius: 5px;
+    max-width: 80%;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }

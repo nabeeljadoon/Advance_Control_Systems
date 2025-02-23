@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 3: State-Space Control</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Phase 3: State-Space Control</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-content">
+        <h2>Overview</h2>
+        <p>State-space representation allows us to design advanced controllers for optimized dynamic response.</p>
+
+        <h2>📌 State-Space Model</h2>
+        <pre>
+A = [0 1; 0 -5.345];
+B = [0; 0.3566];
+C = [1 0];
+D = 0;
+
+% Define desired poles
+poles = [-2+3.4641i, -2-3.4641i];
+
+% Compute feedback gain
+K = acker(A, B, poles);
+        </pre>
+
+        <h2>📌 MATLAB Simulation</h2>
+        <pre>
+% Form new state-space system
+Anew = A - B*K;
+Tss = ss(Anew, [], C, D);
+
+% Simulate step response
+x0 = [-20; 0];
+initial(Tss, x0)
+title('Compensated Step Response')
+        </pre>
+
+        <h2>🏁 Final Step</h2>
+        <p>With all phases completed, we now have a **fully controlled system** with multiple advanced control strategies.</p>
+        <a href="../../projects.html" class="button">Explore All Phases</a>
+    </section>
+</body>
+</html>

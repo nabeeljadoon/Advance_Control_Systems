@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 2: PID Controller</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Phase 2: PID Controller</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-content">
+        <h2>Overview</h2>
+        <p>The PID controller is designed to regulate the system behavior by adjusting its **Proportional (P), Integral (I), and Derivative (D) gains**.</p>
+
+        <h2>📌 PID Control Algorithm</h2>
+        <pre>
+% Define PID Gains
+Kp = 2.0;
+Ki = 1.0;
+Kd = 0.5;
+
+% Implement PID Control
+previous_error = 0;
+integral = 0;
+
+function PID_Control(setpoint, processVariable)
+    error = setpoint - processVariable;
+    integral = integral + error * dt;
+    derivative = (error - previous_error) / dt;
+    output = Kp * error + Ki * integral + Kd * derivative;
+    previous_error = error;
+end
+        </pre>
+
+        <h2>📌 Simulation Results</h2>
+        <p>Using MATLAB Simulink, the system response is significantly improved with PID control.</p>
+        <img src="../../assets/pid-response.png" alt="PID System Response Graph" width="80%">
+
+        <h2>📌 Next Phase</h2>
+        <p>Now that we have a PID-controlled system, we can move to **Phase 3: State-Space Control**.</p>
+        <a href="../State-space Control/phase3-state-space-control.html" class="button">Go to Phase 3</a>
+    </section>
+</body>
+</html>

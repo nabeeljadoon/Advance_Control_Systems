@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Position Control System</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Linear Position Control System</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-content">
+        <h2>Overview</h2>
+        <p>The **Linear Position Control System** controls **linear movement** using a DC motor, rotary encoder, and PID controller.
+           It allows precise positioning with **manual and automatic control modes**.</p>
+
+        <h2>📌 System Components</h2>
+        <ul>
+            <li>DC Motor with **Rotary Encoder**</li>
+            <li>Arduino Mega 2560 for real-time processing</li>
+            <li>LCD Display to monitor system parameters</li>
+            <li>Physical **knobs** for PID tuning</li>
+            <li>Limit switches for **homing mechanism**</li>
+        </ul>
+
+        <h2>⚙️ System Operation</h2>
+        <p>The system operates in **two modes**:</p>
+        <ul>
+            <li><b>Manual Mode:</b> User moves the system using **Move Left / Move Right** buttons.</li>
+            <li><b>Automatic Mode:</b> The system moves to a **setpoint** using PID control.</li>
+        </ul>
+
+        <h2>📌 Circuit Diagram</h2>
+        <img src="../assets/linear-system-images/System_Description_Controller.png" alt="Linear Position Control Circuit" width="80%">
+
+        <h2>📌 PID Algorithm</h2>
+        <pre>
+double Kp = 1.2;
+double Ki = 0.7;
+double Kd = 0.3;
+double setPoint = 50; // Target position in mm
+double processVariable = 0;
+double controlOutput = 0;
+
+void loop() {
+    double error = setPoint - processVariable;
+    double integral = integral + error;
+    double derivative = error - previous_error;
+    controlOutput = Kp * error + Ki * integral + Kd * derivative;
+    previous_error = error;
+}
+        </pre>
+
+        <h2>🔗 Download Resources</h2>
+        <ul>
+            <li><a href="#">📥 Arduino Code</a></li>
+            <li><a href="#">📥 Simulink Model</a></li>
+        </ul>
+
+        <h2>🔗 Related Project</h2>
+        <p>Explore the **Angular Position Control System**.</p>
+        <a href="angular-position-control.html" class="button">Go to Angular Control</a>
+    </section>
+</body>
+</html>
