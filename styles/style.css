@@ -1,4 +1,4 @@
-/* General Page Styling */
+/* ===== Global Page Styling ===== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header Section */
+/* ===== Header Section ===== */
 header {
     background: #333;
     color: white;
@@ -15,7 +15,7 @@ header {
     text-align: center;
 }
 
-/* Navigation Bar */
+/* ===== Navigation Bar ===== */
 nav ul {
     list-style: none;
     padding: 0;
@@ -39,7 +39,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Hero Section */
+/* ===== Hero Section ===== */
 .hero {
     text-align: center;
     padding: 60px;
@@ -51,6 +51,7 @@ nav ul li a:hover {
     font-size: 2em;
 }
 
+/* ===== Button Styles ===== */
 .button {
     display: inline-block;
     background: #008CBA;
@@ -60,27 +61,29 @@ nav ul li a:hover {
     font-weight: bold;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background 0.3s ease-in-out;
 }
 
 .button:hover {
     background: #005f79;
 }
 
-/* Project List Section */
+/* ===== Project List Section ===== */
 .project-list {
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px; /* Adds spacing between project cards */
 }
 
+/* ===== Project Cards - Uniform Sizing & Hover Effect ===== */
 .project {
     background: white;
     padding: 20px;
-    margin: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
     text-align: center;
     transition: transform 0.2s ease-in-out;
 }
@@ -90,7 +93,7 @@ nav ul li a:hover {
 }
 
 .project h3 {
-    color: #333;
+    color: #008CBA;
     border-bottom: 2px solid #008CBA;
     padding-bottom: 10px;
 }
@@ -100,7 +103,7 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-/* Project Page Styling */
+/* ===== Project Content Styling ===== */
 .project-content {
     padding: 40px;
     background: white;
@@ -115,18 +118,42 @@ nav ul li a:hover {
     padding-bottom: 5px;
 }
 
+/* ===== Image Styling for Control Systems ===== */
 .project-content img {
     display: block;
-    margin: auto;
-    border-radius: 5px;
-    max-width: 80%;
+    margin: 20px auto; /* Centers images */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 90%; /* Ensures it does not exceed the container */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Footer */
+/* ===== Hover Effect - Zoom & Shadow ===== */
+.project-content img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 4px 10px rgba(0, 140, 186, 0.3); /* Blue glow effect */
+}
+
+/* ===== Footer Styling ===== */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 40px;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .project-content img {
+        max-width: 100%; /* Uses full width on smaller screens */
+    }
 }
