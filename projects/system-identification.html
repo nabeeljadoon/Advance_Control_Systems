@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Identification & Control</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>System Identification & Control</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-content">
+        <h2>Overview</h2>
+        <p>This project focuses on real-time system identification of a DC motor using MATLAB, Simulink, and Arduino. The goal is to model the motor dynamics, estimate a transfer function, and implement closed-loop control.</p>
+
+        <h2>📌 Hardware & Software Used</h2>
+        <ul>
+            <li>🔹 Arduino MEGA 2560</li>
+            <li>🔹 DC Motor with Quadrature Encoder</li>
+            <li>🔹 L298N Motor Driver</li>
+            <li>🔹 MATLAB & Simulink</li>
+            <li>🔹 System Identification Toolbox</li>
+        </ul>
+
+        <h2>⚙️ Technical Explanation</h2>
+        <p>We first apply a voltage input to the motor and measure the angular velocity using an encoder. The collected input-output data is used in MATLAB’s System Identification Toolbox to estimate a transfer function.</p>
+
+        <h3>📊 Transfer Function Model</h3>
+        <p>The estimated model for the system is:</p>
+        <pre>H(s) = 6.853 / (s² + 17.72s + 104.8)</pre>
+        
+        <h2>🔗 Download Code & Models</h2>
+        <ul>
+            <li><a href="#">📥 Download MATLAB Code</a></li>
+            <li><a href="#">📥 Download Simulink Model</a></li>
+            <li><a href="#">📥 Download Arduino Firmware</a></li>
+        </ul>
+
+        <h2>📈 Results</h2>
+        <p>The system response after applying the estimated model in closed-loop control is shown below.</p>
+        <img src="../assets/system-response.png" alt="System Response Graph" width="80%">
+
+        <h2>🏭 Industry Relevance</h2>
+        <p>System identification is widely used in industrial control applications such as:
+        <ul>
+            <li>✔️ Automotive Sensor Calibration</li>
+            <li>✔️ Robotic Motion Control</li>
+            <li>✔️ Aerospace Actuation Systems</li>
+        </ul>
+        </p>
+
+        <h2>📌 Next Steps</h2>
+        <p> **Machine Learning for adaptive tuning**.</p>
+    </section>
+</body>
+</html>

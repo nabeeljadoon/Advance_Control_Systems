@@ -47,3 +47,20 @@ nav ul li a {
 .contact-content, .about-content {
     padding: 20px;
 }
+.project-content {
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.project-content h2 {
+    color: #333;
+    border-bottom: 2px solid #008CBA;
+    padding-bottom: 5px;
+}
+.project-content img {
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
