@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #444;
+    color: white;
+}
+.button {
+    display: inline-block;
+    background: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.project-list {
+    padding: 20px;
+}
+.project {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+.contact-content, .about-content {
+    padding: 20px;
+}
